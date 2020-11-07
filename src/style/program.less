@@ -1,0 +1,142 @@
+.section-program {
+  position: relative;
+
+  padding-top: 179px;
+  padding-left: 168px;
+  padding-bottom: 180px;
+
+  background-image: url('../img/program-bg.png');
+  background-size: cover;
+  background-position: center;
+
+  // media
+  .tablet({
+    padding-top: 88px;
+    padding-bottom: 84px;
+    padding-left: 30px;
+  });
+  // media
+
+  &::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+
+    top: 75px;
+    right: 90px;
+    bottom: 95px;
+    left: 88px;
+
+    background: rgba(#000000, .8);
+
+    .tablet({
+      top: 30px;
+      bottom: 30px;
+      left: 27px;
+    });
+  }
+
+  &__title {
+    z-index: 10;
+    position: relative;
+
+    margin-bottom: 83px;
+
+    text-transform: uppercase;
+
+    .tablet({
+      font-size: 44px;
+    });
+
+
+    &::after {
+      z-index: -1;
+
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -82px;
+      width: 100%;
+      height: 113px;
+
+      background: #DA353B;
+
+      // media
+      .tablet({
+        top: -30px;
+        height: 80px;
+      });
+    }
+  }
+
+
+  &__events {
+    z-index: 10;
+    position: relative;
+  }
+}
+
+.event {
+  position: relative;
+
+  padding-left: 80px;
+
+  width: 100%;
+  max-width: 700px;
+
+  // media
+  .tablet({
+    padding-left: 0;
+  });
+
+  .mobile-small({
+    padding-right: 20px;
+  });
+  // media
+
+  &:not(:last-child) {
+    margin-bottom: 59px;
+
+    // media
+    .mobile-small({
+      margin-bottom: 48px;
+    });
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -26px;
+    right: -80px;
+
+    background: #ffffff;
+    width: 100%;
+    height: 6px;
+
+    // media
+    .tablet({
+      right: 0;
+    });
+  }
+
+  &__time-and-place {
+    display: block;
+    margin-bottom: 11px;
+
+    text-transform: uppercase;
+  }
+
+  &__slash {
+    margin: 0 12px;
+  }
+
+  &__description {
+    margin-bottom: 9px;
+    letter-spacing: 0.4px;
+  }
+
+  &__author {
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+}

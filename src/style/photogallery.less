@@ -1,0 +1,43 @@
+.section-photogallery {
+  padding-top: 82px;
+  padding-bottom: 170px;
+
+  &__title {
+    z-index: 10;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+
+    padding-left: 170px;
+
+    .tablet({
+      padding-left: 20px;
+    });
+
+    &::after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+
+      top: -144px;
+      left: 91px;
+
+      width: 220px;
+      height: 220px;
+      background: transparent;
+      border: 6px solid #DA353B;
+    }
+  }
+}
+
+
+// slick
+.slider-photogallery__item {
+  width: 380px;
+
+  margin: 0 15px;
+}
+
+.slider-photogallery__img-wrap {
+  width: 380px;
+}

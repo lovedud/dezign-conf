@@ -1,0 +1,162 @@
+.footer {
+  z-index: 1000;
+  position: relative;
+  margin-top: -213px;
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  background-image: url('../img/footer-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  // media
+  .tablet({
+    padding-top: 40px;
+    padding-bottom: 30px;
+
+    background-image: url('../img/footer-bg-mobile.png');
+  });
+
+  .mobile-big({
+    margin-top: 0;
+  });
+}
+
+.footer__socials-wrap {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 40px;
+
+  .mobile-big({
+    margin-bottom: 34px;
+  });
+}
+
+.socials-list {
+  display: flex;
+  align-items: center;
+}
+
+.socials-list__li {
+  &:not(:last-child) {
+    position: relative;
+
+    margin-right: 60px;
+
+    // media
+    .mobile-big({
+      margin-right: 52px;
+    });
+
+
+    // media
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50px;
+
+      width: 4px;
+      height: 4px;
+      background: #DA353B;
+    }
+  }
+}
+
+.socials-list__link {
+  &:hover {
+    transition: all ease .3s;
+    opacity: .7;
+  }
+}
+
+.socials-list__icon {
+  fill: #fff;
+
+  &_twitter {
+    width: 24px;
+    height: 20px;
+  }
+
+  &_in {
+    width: 24px;
+    height: 24px;
+  }
+
+  &_fb {
+    width: 13px;
+    height: 24px;
+  }
+
+  &_youtube {
+    width: 24px;
+    height: 17px;
+  }
+
+  &_instagram {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.footer__logo {
+  cursor: pointer;
+}
+
+.footer__logo-icon {
+  width: 156px;
+}
+
+.footer__bottom {
+  padding-left: 90px;
+  padding-right: 90px;
+
+  display: flex;
+  align-items: center;
+
+  .tablet({
+    flex-direction: column;
+    align-items: flex-start;
+  });
+}
+
+.footer__links {
+  margin-left: 82px;
+
+  .tablet({
+    margin-bottom: 33px;
+  });
+}
+
+.footer__email {
+  margin-left: 121px;
+
+  .tablet({
+    margin-bottom: 19px;
+  });
+}
+
+.footer__tel {
+  margin-left: 51px;
+}
+
+.links-list__li {
+  &:not(:first-child) {
+    margin-left: 20px;
+
+    .tablet({
+      margin-top: 18px;
+    });
+
+    .mobile-big({
+      margin-top: 6px;
+    });
+  }
+}
+
+.links-list {
+  display: flex;
+}

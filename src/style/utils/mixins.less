@@ -1,0 +1,41 @@
+// media
+
+/*.desktop-max(@rules) {
+  @media (max-width: 1300px) { @rules(); }
+}*/
+
+.desktop(@rules) {
+  @media (max-width: 1200px) { @rules(); }
+}
+
+
+/*.desktop-min(@rules) {
+  @media (max-width: 1130px) { @rules(); }
+}*/
+
+
+/*
+.tablet-big(@rules) {
+  @media (max-width: 960px) { @rules(); }
+}
+*/
+
+
+.tablet(@rules) {
+  @media (max-width: 768px) { @rules(); }
+}
+
+
+.mobile-big(@rules) {
+  @media (max-width: 600px) { @rules(); }
+}
+
+/*
+.mobile-middle(@rules) {
+  @media (max-width: 500px) { @rules(); }
+}*/
+
+
+.mobile-small(@rules) {
+  @media (max-width: 375px) { @rules(); }
+}

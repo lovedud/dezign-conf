@@ -1,0 +1,95 @@
+.section-form {
+  padding-top: 90px;
+  padding-left: 170px;
+  padding-right: 109px;
+  padding-bottom: 318px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  background-image: url('../img/form-bg.png');
+  background-position: center;
+  background-size: cover;
+
+  .mobile-big({
+    padding-top: 30px;
+    padding-bottom: 40px;
+  });
+
+  // media
+
+  &__title {
+    margin-bottom: 39px;
+
+    text-transform: uppercase;
+
+    // media
+    .mobile-big({
+      line-height: 90%;
+    });
+
+    .mobile-big({
+
+      font-size: 44px;
+      margin-bottom: 13px;
+    });
+  }
+
+  &__left {
+    width: 100%;
+    max-width: 540px;
+    margin-right: 100px;
+
+    // media
+    .tablet({
+      margin-right: 0;
+
+      max-width: 100%;
+    });
+
+
+  }
+
+
+}
+
+.mobile-big-br {
+  display: none;
+
+  // media
+  .mobile-big({
+    display: block;
+  });
+}
+
+.form-participate__button-wrapper {
+  margin-top: 59px;
+
+  width: 100%;
+}
+
+.section-form__right {
+  padding-top: 22px;
+}
+
+.section-form__img-wrap {
+  z-index: 10;
+  position: relative;
+
+  width: 100%;
+  max-width: 521px;
+
+  &::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: -24px;
+    right: -24px;
+
+    width: 89%;
+    height: 97%;
+
+    border: 6px solid #DA353B;
+  }
+}

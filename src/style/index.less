@@ -1,0 +1,92 @@
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/typography";
+
+html {
+  font-size: 16px;
+  font-family: "Helvetica-light", sans-serif;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a { text-decoration: none; }
+
+p { margin: 0; }
+
+img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea { vertical-align: middle; }
+
+textarea { resize: none; }
+
+section { position: relative; }
+
+input,
+select,
+button { outline: none; }
+
+input:invalid:not(:placeholder-shown) {border-color: red;}
+input:valid:not(:placeholder-shown) {border-color: gray;}
+
+*, *:before, *:after { box-sizing: border-box; }
+
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+.wrapper-content {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+
+  padding: 0 20px;
+}
+
+.link {
+  text-decoration: none;
+
+  &_hover {
+    &:hover {
+      color: rgba(#ffffff, .7);
+    }
+  }
+}
+
+//Модули
+@import "./header";
+@import "./questions";
+@import "./speakers";
+@import "./program";
+@import "./photogallery";
+@import "./form";
+@import "./footer";
+@import "./button";
+@import "./input";
+
+

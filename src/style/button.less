@@ -1,0 +1,125 @@
+.button {
+  padding: 6px 12px;
+
+  display: inline-block;
+
+  cursor: pointer;
+  border: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &_red {
+    background-color: #DA353B;
+  }
+
+  &_red-hover {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: -100%;
+
+      width: 100%;
+      height: 100%;
+
+      background: #000000;
+      transition: all ease-out .3s;
+    }
+
+    &:hover {
+      &::before {
+        left: 0;
+
+        transition: all ease-in .3s;
+      }
+    }
+  }
+
+  &_transparent {
+    background: transparent;
+
+  }
+
+
+  &_transparent-hover {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      z-index: 5;
+      position: absolute;
+      top: 0;
+      left: -100%;
+
+      width: 100%;
+      height: 100%;
+
+      background: #DA353B;
+      transition: all ease-out .3s;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 1px solid #ffffff;
+    }
+
+    &:hover {
+      &::before {
+        left: 0;
+
+        transition: all ease-in .3s;
+      }
+    }
+  }
+
+  &_participate {
+  }
+
+  &__text {
+    z-index: 10;
+    position: relative;
+    letter-spacing: 0.6px
+  }
+
+
+  &-mobile {
+    display: none;
+
+    padding-top: 34px;
+    padding-right: 24px;
+    padding-bottom: 15px;
+    padding-left: 22px;
+    border: 0;
+
+    &__text {
+      letter-spacing: 1px;
+    }
+  }
+
+  &_mobile-transparent {
+  }
+}
+
+.btn-registration {
+  width: 100%;
+
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border: 0;
+
+  cursor: pointer;
+
+  .button__text {
+    text-transform: uppercase;
+  }
+}
