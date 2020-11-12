@@ -12,6 +12,13 @@
   background-position: center;
   background-size: cover;
 
+  // media
+  .tablet-big({
+    padding-left: 27px;
+    padding-right: 0;
+    justify-content: flex-start;
+  });
+
   .mobile-big({
     padding-top: 30px;
     padding-bottom: 40px;
@@ -67,10 +74,20 @@
   margin-top: 59px;
 
   width: 100%;
+
+  // media
+  .mobile-middle({
+    margin-top: 38px;
+  });
 }
 
 .section-form__right {
   padding-top: 22px;
+
+  // media
+  .desktop-max({
+    display: none;
+  });
 }
 
 .section-form__img-wrap {

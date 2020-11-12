@@ -83,12 +83,19 @@
   }
 
   &_participate {
+    .mobile-middle({
+      display: none;
+    });
   }
 
   &__text {
     z-index: 10;
     position: relative;
-    letter-spacing: 0.6px
+    letter-spacing: 0.6px;
+
+    .mobile-middle({
+      font-size: 18px;
+    })
   }
 
 
@@ -101,12 +108,19 @@
     padding-left: 22px;
     border: 0;
 
+    .mobile-middle({
+      display: block;
+    });
+
     &__text {
       letter-spacing: 1px;
     }
   }
 
   &_mobile-transparent {
+    .mobile-middle({
+      padding: 12px 16px;
+    });
   }
 }
 

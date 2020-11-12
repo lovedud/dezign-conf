@@ -104,6 +104,10 @@
 
 .footer__logo {
   cursor: pointer;
+
+  .tablet-big({
+    display: none;
+  });
 }
 
 .footer__logo-icon {
@@ -117,6 +121,16 @@
   display: flex;
   align-items: center;
 
+  // media
+  .desktop-max({
+    justify-content: space-between;
+  });
+
+  .tablet-big({
+    padding-left: 30px;
+    padding-right: 30px;
+  });
+
   .tablet({
     flex-direction: column;
     align-items: flex-start;
@@ -126,6 +140,10 @@
 .footer__links {
   margin-left: 82px;
 
+  .desktop-max({
+    margin-left: 0;
+  });
+
   .tablet({
     margin-bottom: 33px;
   });
@@ -134,6 +152,10 @@
 .footer__email {
   margin-left: 121px;
 
+  .desktop-max({
+    margin-left: 0;
+  });
+
   .tablet({
     margin-bottom: 19px;
   });
@@ -141,11 +163,19 @@
 
 .footer__tel {
   margin-left: 51px;
+
+  .desktop-max({
+    margin-left: 0;
+  });
 }
 
 .links-list__li {
   &:not(:first-child) {
     margin-left: 20px;
+
+    .desktop-max({
+      margin-left: 0;
+    });
 
     .tablet({
       margin-top: 18px;
@@ -159,4 +189,9 @@
 
 .links-list {
   display: flex;
+
+  // media
+  .desktop-max({
+    flex-direction: column;
+  });
 }
